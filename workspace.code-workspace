@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "path": "LocalAI"
+    },
+    {
+      "name": "meta",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "LocalAI/": true
+    }
+  }
+}

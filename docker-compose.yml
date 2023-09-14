@@ -1,0 +1,47 @@
+version: '3.6'
+
+services:
+  local-ai:
+    image: quay.io/go-skynet/local-ai:latest
+    build:
+      context: ./LocalAI
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    env_file:
+      - .env
+    volumes:
+      - ./models:/build/models
+    command: ["/usr/bin/local-ai" ]
+    networks:
+      local-ai:
+        aliases:
+          - localai
+  
+  flowise:
+    image: flowiseai/flowise
+    restart: always
+    environment:
+      - PORT=${PORT}
+      - PASSPHRASE=${PASSPHRASE}
+      - FLOWISE_USERNAME=${FLOWISE_USERNAME}
+      - FLOWISE_PASSWORD=${FLOWISE_PASSWORD}
+      - DEBUG=${DEBUG}
+      - DATABASE_PATH=${DATABASE_PATH}
+      - APIKEY_PATH=${APIKEY_PATH}
+      - SECRETKEY_PATH=${SECRETKEY_PATH}
+      - LOG_LEVEL=${LOG_LEVEL}
+      - LOG_PATH=${LOG_PATH}
+    ports:
+      - '${PORT}:${PORT}'
+    volumes:
+      - ~/.flowise:/root/.flowise
+    command: /bin/sh -c "sleep 3; flowise start"
+    networks:
+      local-ai:
+        aliases:
+          - flowise
+
+networks:
+    local-ai:
+        name: local-ai
