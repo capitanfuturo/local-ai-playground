@@ -6,7 +6,7 @@ $(eval $(RUN_ARGS):;@:)
 
 # Load environment variables
 ifneq (,$(wildcard ./.env))
-    include dev.env
+    include .env
     export
 endif
 

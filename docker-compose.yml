@@ -20,7 +20,6 @@ services:
   
   flowise:
     image: flowiseai/flowise
-    restart: always
     environment:
       - PORT=${PORT}
       - PASSPHRASE=${PASSPHRASE}
