@@ -21,3 +21,11 @@ logs:
 ##code: @ Open vscode
 code: 
 	code workspace.code-workspace
+
+##init: @ Download model
+init: 
+	sh ./init.sh
+
+##up: @ Up the compose
+up: init
+	docker-compose up

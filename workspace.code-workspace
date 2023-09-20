@@ -4,13 +4,17 @@
       "path": "LocalAI"
     },
     {
+      "path": "chroma"
+    },
+    {
       "name": "meta",
       "path": "."
     }
   ],
   "settings": {
     "files.exclude": {
-      "LocalAI/": true
+      "LocalAI/": true,
+      "chroma/": true,
     }
   }
 }

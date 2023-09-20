@@ -1,5 +1,6 @@
 {
   "projects": {
-    "LocalAI": "git@github.com:go-skynet/LocalAI.git"
+    "LocalAI": "git@github.com:go-skynet/LocalAI.git",
+    "chroma": "git@github.com:chroma-core/chroma.git"
   }
 }

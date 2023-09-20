@@ -1,3 +1,4 @@
 /models/*
 !models/.gitkeep
 /LocalAI
+/chroma

@@ -6,12 +6,16 @@ In particular you can play with:
 
 - [LocalAI](https://localai.io/)
 - [Flowise](https://flowiseai.com/) and under the hood [Langchain](https://python.langchain.com/)
+- [chroma](https://docs.trychroma.com/)
 
 ## Requirements
+
+I tested this project only on Linux / WSL2 systems. You need to have this software installed in you machine:
 
 - [docker](https://www.docker.com/)
 - [docker-compose](https://www.docker.com/)
 - [meta repo](https://github.com/mateodelnorte/meta)
+- make
 
 ## Run Locally
 
@@ -30,13 +34,13 @@ Go to the project directory
 Install some LLM models to start play with
 
 ```bash
-  sh ./init.sh
+  make init
 ```
 
 Start the containers compose
 
 ```bash
-  docker-compose up
+  make up
 ```
 
 ## Authors
