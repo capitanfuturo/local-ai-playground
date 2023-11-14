@@ -16,7 +16,7 @@ help:
 
 ##logs: @ Show logs
 logs:
-	docker-compose logs --follow
+	docker compose logs --follow
 
 ##code: @ Open vscode
 code: 
@@ -28,4 +28,8 @@ init:
 
 ##up: @ Up the compose
 up: init
-	docker-compose up
+	docker compose up
+
+##ollama: @ Up the ollama compose
+ollama:
+	docker compose -f docker-compose.ollama.yml up

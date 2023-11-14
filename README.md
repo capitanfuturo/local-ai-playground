@@ -7,6 +7,7 @@ In particular you can play with:
 - [LocalAI](https://localai.io/)
 - [Flowise](https://flowiseai.com/) and under the hood [Langchain](https://python.langchain.com/)
 - [chroma](https://docs.trychroma.com/)
+- [ollama](https://github.com/jmorganca/ollama)
 
 ## Requirements
 
